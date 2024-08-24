@@ -20,7 +20,7 @@ function App() {
     <>
       <div>
 
-        <BrowserRouter>
+        <BrowserRouter basename="/Church-Connect-App-Site">
           <Routes>
 
             <Route path="/" element={ <Home /> } />
