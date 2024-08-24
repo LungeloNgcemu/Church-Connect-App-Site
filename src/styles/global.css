@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+
+body {
+    font-family:  Sansita, sans-serif;
+    background-color: white;
+    /* font-size: 16px; */
+    /* Add other font-related styles as needed */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 100px)  {
+
+    .naming {font-size: 1.0rem;}
+    .belowNav{
+        justify-content: space-around;
+    }
+   
+  }
+
+@media (min-width: 400px) and (max-width: 560px) {
+
+    .naming {font-size: 1.5rem;}
+    .belowNav{
+        justify-content: space-around;
+    }
+   
+  }
+
+
+
+  @media (min-width: 560px) and (max-width: 750px) {
+    .naming {
+      font-size: 2.5rem;
+    }
+
+    .belowNav{
+        justify-content: space-around;
+    }
+
+
+  }
+
+  @media (min-width: 750px) {
+    .naming {
+      font-size: 3.5rem;
+    }
+
+    .belowNav{
+        justify-content: space-around;
+    }
+
+
+  }
+
+  @media (min-width: 900px) {
+    .naming {
+      font-size: 4.5rem;
+    }
+
+    .belowNav{
+        justify-content: space-around;
+    }
+
+
+  }
+
+  /***************************************/
+
+.phonex{
+
+    width: 50px; 
+    height: 450px;
+    position: relative;
+    left: 100px;
+    margin-right: 70px 
+
+
+}
+
+
+  @media (min-width: 400px) and (max-width: 670px)   {
+
+    .cover .phonex {height: 100px; width: 100px;}
+   
+   
+  }
+
+  .infoText p{
+     font-size: 1.4rem;
+        font-weight: bold
+  }
+
+  @media  (max-width: 670px)   {
+
+    .info p { display: none;}
+    .cover .phonex {display: none;}
+   
+   
+  }
+
+
+  .overlayContentStyle  {
+    background-color: rgba(255, 255, 255, 0.33);
+     padding: 20px;
+     border-radius: 20px;
+ };
+
+
+ @media (max-width: 700px)   {
+
+    #sort  {display: grid; flex-direction: row;}
+   
+   
+  }
+
+
+  .hope{
+    background-color: rgba(128, 128, 128, 0.089);
+  }
+
+  **************************************
+
+  .formStyle {
+    color: white;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    /* background-color: red; */
+    background-image: url('../assets/pray.jpg'); /* Update path if necessary */
+    background-size: cover;
+    padding: 100px;
+    padding-bottom: 90px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    border-radius: 20px; /* Align items to the right */
+}
+
+/* const formStyle = {
+  color: "white",
+  textShadow: "2px 4px 3px rgba(0, 0, 0, 0.3)",
+  // backgroundColor: "red",
+  backgroundImage: `url(${pray})`,
+  backgroundSize: "cover",
+  padding: "100px",
+  paddingBottom: "90px",
+  margin: "50px",
+  display: "flex",
+  flexDirection: "column",
+  width: "100%",
+  alignItems: "flex-end",
+  borderRadius: "20px" // Align items to the right
+}; */
+
+
+.labelStyle{
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+}
+
+.inputStyle {
+    margin-left: 10px;
+    width: 60%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 1px 8px grey;
+    padding-left: 20px;
+
+}
+
+.numberStyle {
+  border-radius: 20px;
+  width: 60%;
+}
+
+@media (max-width: 1100px) {
+
+  .inputStyle {
+
+    width: 100%;
+    margin: 20px;
+    margin-left: 0px;
+   
+}
+
+.numberStyle {
+  margin: 20px;
+  width: 100%;
+}
+}
+
+
+
+
+
+/* input:invalid {
+  background: green;
+} */

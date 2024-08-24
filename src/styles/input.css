@@ -1,0 +1,31 @@
+/* PhoneNumber.css */
+:root {
+    --PhoneInputCountryFlag-height: 24px;
+    --PhoneInputCountryFlag-borderColor: black;
+    --PhoneInputCountrySelectArrow-color: blue;
+    --PhoneInputCountrySelectArrow-opacity: 0.8;
+    --PhoneInput-color--focus: green;
+  }
+  
+  .phone-number-input .PhoneInputCountryFlag {
+    height: var(--PhoneInputCountryFlag-height);
+    border-color: var(--PhoneInputCountryFlag-borderColor);
+  }
+  
+  .phone-number-input .PhoneInputCountrySelectArrow {
+    color: var(--PhoneInputCountrySelectArrow-color);
+    opacity: var(--PhoneInputCountrySelectArrow-opacity);
+  }
+  
+  .phone-number-input .PhoneInputCountrySelect:focus .PhoneInputCountryFlag,
+  .phone-number-input .PhoneInputCountrySelect:focus .PhoneInputCountrySelectArrow {
+    color: var(--PhoneInput-color--focus);
+    border-color: var(--PhoneInput-color--focus);
+  }
+
+  /* .inputStyle{
+
+background-color: brown;
+
+  } */
+  
