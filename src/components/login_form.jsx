@@ -153,6 +153,7 @@ export default function MyForm() {
         borderRadius: "15px", // Example border radius
         cursor: "pointer", // Change cursor on hover
         boxShadow: "0 1px 8px grey",
+         height: "15%"
 
     };
 
