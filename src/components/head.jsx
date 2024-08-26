@@ -97,14 +97,14 @@ export default function Head() {
             <NavBar show = {  true} />
 
 
-            <div className="cover" style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", margin: "100px" }} >
+            <div className="cover" style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", marginTop: "100px" }} >
                 {/* <img className="phonex" src={phone} alt="Phone" /> */}
 
 
                 <div className="info infoText overlayContentStyle" id="sort" >
 
                     <div>
-                        <h1 style={{ margin: "0px", fontSize: "1.5rem" }}>Experience the power of fellowship</h1>
+                        <h4 className="title" style={{ margin: "0px", fontSize: "1.5rem" }}>Experience the power of fellowship</h4>
 
                         {/* <p >Church Event Calender</p>
                         <p >Social Media post</p>

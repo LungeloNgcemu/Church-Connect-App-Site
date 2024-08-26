@@ -3,6 +3,7 @@ import "../styles/navbar.css"
 import DropDown from "./dropdown";
 import { useNavigate } from "react-router-dom";
 import image from "../assets/logoClass.png"
+import DropMenu from "./drop_menu";
 
 
 
@@ -22,15 +23,18 @@ export default function NavBar(props) {
 
     return (
 
-        <div style={{ position: "fixed", width: "100%" }}>
+        <div style={{ position: "fixed", width: "100%" , }}>
             <div className="navbar-container">
+
+
                 <div className="logoContainer">
 
                     <img src={image} height={"50px"} />
 
                 </div>
 
-                { props.show ? <div className="direct"  >
+               
+                {props.show ? <div className="direct big-nav"  >
                     <ul>
                         <li><a href="/" onClick={handleClick("/")}>Home</a></li>
                         <li><a href="/about" onClick={handleClick("/about")}>About</a></li>
@@ -38,8 +42,10 @@ export default function NavBar(props) {
                         <li><a href="/register" onClick={handleClick("/register")}>Register</a></li>
                         <li><a href="#contact" >Contact</a></li>
                         <li><a href="/feed" onClick={handleClick("/feed")}>Feed-Back</a></li>
+
                     </ul>
-                </div> : <div></div> }
+                </div> : <div></div>}
+                <DropMenu />
             </div>
         </div>
 

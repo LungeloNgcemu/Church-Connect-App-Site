@@ -33,8 +33,9 @@ export default function Video() {
     const container = {
         minheight: "500px",
 
+        marginTop: "30px",
         display: "flex",
-        margin: "20px",
+
         backgroundColor: "rgba(128, 128, 128, 0.089)",
         padding: "20px",
         borderRadius: "20px",
@@ -43,15 +44,15 @@ export default function Video() {
     }
 
     const wrapperStyle = {
-        // backgroundColor: "red",
-        minWidth: "400px",
+        //  backgroundColor: "red",
+        minWidth: "50%",
         minHeight: "400px",
         display: "flex",
         justifyContent: "center",
         alignItems: "stretch",
         flex: "1",
         borderRadius: "20px",
-        overflow: "hidden", // Ensures the border-radius is applied properly
+        // overflow: "hidden", // Ensures the border-radius is applied properly
     };
 
     const videoText = {
@@ -59,7 +60,7 @@ export default function Video() {
         flexDirection: "column",
         padding: "50px",
         alignItems: "center",
-        minWidth: "400px",
+
         flex: "1",
         textAlign: "center"
     }
@@ -78,6 +79,7 @@ export default function Video() {
     }
 
     const vidSize = {
+
         flex: "1"
     }
 
@@ -96,13 +98,13 @@ export default function Video() {
 
                 <div style={items}>
 
-                    <h4 style={{ marginBottom: "40px", marginRight: "80px", fontSize: "2.2rem", }}>The Power of Fellowship</h4>
+                    <h4 style={{ fontSize: "2.2rem", }}>The Power of Fellowship</h4>
 
                     <p>Church Event Calendar</p>
                     <p>Social Media Posts</p>
                     <p>Church Chat</p>
                     <p>YouTube Streaming</p>
-                    <p>Scheduled Notifications (Comming soon)</p>
+                    <p>Scheduled Notifications<br></br> (Comming soon)</p>
                     <p>So Much More...</p>
 
                 </div>

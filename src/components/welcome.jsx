@@ -27,7 +27,7 @@ export default function Welcome() {
         padding: "20px",
         textAlign: "center",
         marginLeft: "20px",
-        marginRight: "20px",
+         marginRight: "20px",
         fontSize: "1.2rem",
         borderBottomLeftRadius: "20px", // Apply bottom-left radius
         borderBottomRightRadius: "20px", // Apply bottom-left radius

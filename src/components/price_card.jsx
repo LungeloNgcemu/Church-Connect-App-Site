@@ -77,11 +77,10 @@ export default function Card({ props }) {
     const outer = {
 
         width: "300px",
-        height: "500px",
         boxShadow: "0 1px 8px grey",
         borderRadius: "20px",
         padding: "35px",
-        margin: "20px",
+        margin: "10px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -149,7 +148,7 @@ export default function Card({ props }) {
             <div>
                 <h4>{kind}</h4>
                 <h4 style={h4}>{price}</h4>
-                <p style={{ color: "#888", }}>Best dollar price for all memmbers </p>
+                <p className="title" style={{ color: "#888", }}>Best dollar price for all memmbers </p>
             </div>
 
 
@@ -168,9 +167,9 @@ export default function Card({ props }) {
                     }}
                 >
                     Pay Now
-                </button> : <h3 style={{fontSize: "30px"}}> Waiting for you...</h3>}
+                </button> : <h3 className="title" style={{fontSize: "30px"}}> Waiting for you...</h3>}
 
-                <p>Best dollar price for all memmbers, in all places </p>
+                <p className="title"> Best dollar price for all memmbers, in all places </p>
             </div>
 
 
