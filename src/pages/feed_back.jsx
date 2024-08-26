@@ -90,9 +90,9 @@ export default function FeedBack() {
         backgroundColor: "red",
         backgroundImage: `url(${pray})`,
         backgroundSize: "cover",
-        padding: "100px",
+        padding: "30px",
         paddingBottom: "90px",
-        margin: "50px",
+        margin: "30px",
         display: "flex",
         flexDirection: "column",
         width: "100%",
@@ -122,7 +122,8 @@ export default function FeedBack() {
     };
 
     const button = {
-        margin: "0px",
+        marginTop: "5px",
+        marginBottom: "5px",
         width: "100%", // Make button full width of parent container
         padding: "10px", // Adjust padding as needed
         backgroundColor: "#6495ED", // Example background color

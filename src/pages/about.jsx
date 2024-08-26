@@ -10,9 +10,10 @@ export default function About() {
     const container = {
         display: "flex",
         justifyConrent: "space-around",
+        flexWrap: "wrap",
         // backgroundColor: "red",
         width: "100%",
-        height: "100%",
+     
         marginBottom: "100px"
     }
 
@@ -29,8 +30,14 @@ export default function About() {
         justifyContent: "center",
         alignItems: "center",
         padding: "40px",
-        fontSize: "1.5rem"
+        fontSize: "1.5rem",
+        flex: "1"
     }
+
+    const logoStyle = { 
+        width: "50%" }
+
+    
 
     return (
 
@@ -39,8 +46,8 @@ export default function About() {
 
             <div style={container}>
 
-                <div>
-                    <img src={logo}></img>
+                <div  style={{width : "100%",flex : "1", minWidth: "300px"}} >
+                    <img style={{width : "100%"}} src={logo}></img>
                 </div>
                 <div style={containerText}>
 

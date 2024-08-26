@@ -22,7 +22,8 @@ export default function Tops(props) {
         display:"flex",
         justifyContent: "center",
         alignItems: "center",
-        width: "100%"
+        width: "100%",
+        
 
     };
 
@@ -44,6 +45,7 @@ export default function Tops(props) {
         borderBottomLeftRadius: "20px", // Apply bottom-left radius
         borderBottomRightRadius: "20px", // Apply bottom-left radius
       
+      
 
 
     };
@@ -63,7 +65,7 @@ export default function Tops(props) {
             </div>
 
             <div style={ welcome }>
-            <h4> {props.heading}</h4>
+            <h4 style={{textAlign: "center"}}> {props.heading}</h4>
             </div>
 
         </div>

@@ -146,7 +146,7 @@ export default function MyForm() {
     const button = {
         margin: "10px",
         width: "100%", // Make button full width of parent container
-        padding: "10px", // Adjust padding as needed
+        padding: "12px", // Adjust padding as needed
         backgroundColor: "#6495ED",// Example background color
         color: "white", // Example text color
         border: "none", // Remove default border

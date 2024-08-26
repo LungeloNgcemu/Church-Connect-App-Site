@@ -22,8 +22,7 @@ export default function Login() {
         backgroundSize: "cover",
         borderRadius: "20px",
         margin: "10px",
-        height: "550px",
-        width: "400px",
+   
         boxShadow: "0 1px 8px grey",
 
 
@@ -34,7 +33,8 @@ export default function Login() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "40vh"
+        height: "40vh",
+        padding: "30px"
 
     }
 
