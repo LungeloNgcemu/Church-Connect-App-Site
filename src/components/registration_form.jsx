@@ -407,8 +407,9 @@ function RegistrationForm() {
                     onChange={handleChange}
                 />
             </div>
+            <button type='submit' style={button} > submit</button>
 
-            <input style={button} type="submit" />
+          
         </form>
 
     );

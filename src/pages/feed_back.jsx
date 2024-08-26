@@ -202,7 +202,7 @@ export default function FeedBack() {
                     </div>
 
 
-                    <input style={button} type="submit" />
+                    <button type='submit' style={button} > submit</button>
                 </form>
 
             </div>

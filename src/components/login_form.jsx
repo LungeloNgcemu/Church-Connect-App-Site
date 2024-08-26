@@ -180,7 +180,8 @@ export default function MyForm() {
             </div>
             <br /><br />
 
-            <input style={button} type="submit" />
+           
+            <button type='submit' style={button} > submit</button>
 
         </form>
     )
