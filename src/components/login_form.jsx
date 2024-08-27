@@ -118,7 +118,7 @@ export default function MyForm() {
 
 
             try {
-//it has to be a user already in side
+                //it has to be a user already in side
                 const token = await appwriteConnection.createPhoneToken(
                     newObject.ChurchUserId,
                     valueNumber
@@ -153,7 +153,7 @@ export default function MyForm() {
         borderRadius: "15px", // Example border radius
         cursor: "pointer", // Change cursor on hover
         boxShadow: "0 1px 8px grey",
-         height: "15%"
+        height: "45px"
 
     };
 
@@ -168,7 +168,7 @@ export default function MyForm() {
 
 
     return (
-        
+
         <form onSubmit={handleSubmit}>
 
 
@@ -180,7 +180,7 @@ export default function MyForm() {
             </div>
             <br /><br />
 
-           
+
             <button type='submit' style={button} > submit</button>
 
         </form>
