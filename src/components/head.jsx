@@ -4,6 +4,9 @@ import NavBar from "./navbar";
 import phone from "../assets/phoneClear.png"
 import { useNavigate } from "react-router-dom";
 import "../styles/global.css";
+import { Link } from "react-router-dom";
+
+
 
 export default function Head() {
 
@@ -12,6 +15,13 @@ export default function Head() {
 
     function handleClick(name) {
         navigate(name);
+    };
+
+    const handleDownload = () => {
+        alert('Once the download is complete, open the "CCA" app, go to the "Downloads" folder, and tap on the APK file to install the app.');
+
+        // Simulate a click on the hidden link
+        document.getElementById('download-link').click();
     };
 
 
@@ -123,14 +133,18 @@ export default function Head() {
                             <button style={buttonStyleL} onClick={() => { handleClick("login") }} > Login to Update</button>
 
                         </div>
-                        <button
-                            style={buttonStyleD}
-                            onClick={() => {
-                                window.location.href = '../download/CCA.apk';
-                                alert('Once the download is complete, open the "CCA" app, go to the "Downloads" folder, and tap on the APK file to install the app.');
-                            }}>
+                        <button style={buttonStyleD} onClick={handleDownload}>
                             Download Mobile App (APK)
                         </button>
+                        <Link
+                            id="download-link"
+                            to="/CCA.apk"
+                            target="_blank"
+                            download
+                            style={{ display: "none" }}
+                        >
+                            Download
+                        </Link>
                     </div>
                 </div>
             </div>
