@@ -23,10 +23,10 @@ export default function Head() {
         backgroundSize: "cover",  // Ensure the image covers the div
         backgroundPosition: "center",
         borderBottomRightRadius: "120px",
-        display:"flex",
+        display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-      
+
     };
 
 
@@ -94,7 +94,7 @@ export default function Head() {
 
     return (
         <div style={layout}>
-            <NavBar show = {  true} />
+            <NavBar show={true} />
 
 
             <div className="cover" style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", marginTop: "100px" }} >
@@ -123,7 +123,14 @@ export default function Head() {
                             <button style={buttonStyleL} onClick={() => { handleClick("login") }} > Login to Update</button>
 
                         </div>
-                        <button style={buttonStyleD}> Download Mobile App (APK)</button>
+                        <button
+                            style={buttonStyleD}
+                            onClick={() => {
+                                window.location.href = '../download/CCA.apk';
+                                alert('Once the download is complete, open the "CCA" app, go to the "Downloads" folder, and tap on the APK file to install the app.');
+                            }}>
+                            Download Mobile App (APK)
+                        </button>
                     </div>
                 </div>
             </div>
