@@ -106,6 +106,8 @@ export default function Code() {
         borderRadius: "15px", // Example border radius
         cursor: "pointer", // Change cursor on hover
         boxShadow: "0 1px 8px grey",
+        height: "45px"
+        
 
     };
 
@@ -116,6 +118,7 @@ export default function Code() {
         borderRadius: "5px",
         border: "1px solid #6495ED",
         boxShadow: "0 1px 8px grey",
+      
 
 
 
@@ -142,8 +145,7 @@ export default function Code() {
 
             </div>
             <br /><br />
-
-            <input style={button} type='submit' />
+            <button type='submit' style={button} > submit</button>
 
         </form>
     )

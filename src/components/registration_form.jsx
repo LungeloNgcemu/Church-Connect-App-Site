@@ -213,7 +213,7 @@ function RegistrationForm() {
                     if (authenticated) {
                         updatId();
                         console.log("next page - updated")
-                        navigate('code');
+                        navigate('/code');
                     };
 
                 }

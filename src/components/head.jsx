@@ -119,8 +119,8 @@ export default function Head() {
 
                         <div style={{ display: "flex", justifyContent: "space-between" }}>
 
-                            <button style={buttonStyleR} onClick={() => { handleClick("register") }}>Register Ministry</button>
-                            <button style={buttonStyleL} onClick={() => { handleClick("login") }} > Login to Ministry</button>
+                            {/* <button style={buttonStyleR} onClick={() => { handleClick("register") }}>Register Ministry</button> */}
+                            <button style={buttonStyleL} onClick={() => { handleClick("login") }} > Login to Update</button>
 
                         </div>
                         <button style={buttonStyleD}> Download Mobile App (APK)</button>

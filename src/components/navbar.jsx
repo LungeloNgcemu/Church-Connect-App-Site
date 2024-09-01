@@ -23,7 +23,7 @@ export default function NavBar(props) {
 
     return (
 
-        <div style={{ position: "fixed", width: "100%" , }}>
+        <div style={{ position: "fixed", width: "100%", }}>
             <div className="navbar-container">
 
 
@@ -33,13 +33,13 @@ export default function NavBar(props) {
 
                 </div>
 
-               
+
                 {props.show ? <div className="direct big-nav"  >
                     <ul>
                         <li><a href="/" onClick={handleClick("/")}>Home</a></li>
                         <li><a href="/about" onClick={handleClick("/about")}>About</a></li>
                         <li><a href="/login" onClick={handleClick("/login")}>Login</a></li>
-                        <li><a href="/register" onClick={handleClick("/register")}>Register</a></li>
+                        {/* <li><a href="/register" onClick={handleClick("/register")}>Register</a></li> */}
                         <li><a href="#contact" >Contact</a></li>
                         <li><a href="/feed" onClick={handleClick("/feed")}>Feed-Back</a></li>
 

@@ -35,10 +35,12 @@ function App() {
 
             <Route path="/register" element={ <Register /> } />
             <Route path="register/code" element={ <Otp /> } />
+            <Route path="/code" element={ <Otp /> } />
 
             <Route path="/login" element={ <Login /> } />
             <Route path="/login/code" element={ <Otp /> } />
 
+            <Route path="/code/account" element={ <Account /> } />
             <Route path="/login/code/account" element={ <Account /> } />
             <Route path="/register/code/account" element={ <Account /> } />
             <Route path="/login/account" element={ <Account /> } />

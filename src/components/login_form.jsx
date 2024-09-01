@@ -129,7 +129,7 @@ export default function MyForm() {
 
                 if (token) {
                     /// send to code
-                    navigate('code');
+                    navigate('/code');
                 };
 
             } catch (error) {
