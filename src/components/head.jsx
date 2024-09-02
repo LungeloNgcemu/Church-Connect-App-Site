@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 export default function Head() {
 
 
@@ -17,12 +18,27 @@ export default function Head() {
         navigate(name);
     };
 
+
     const handleDownload = () => {
         alert('Once the download is complete, open the "CCA" app, go to the "Downloads" folder, and tap on the APK file to install the app.');
-
-        // Simulate a click on the hidden link
-        document.getElementById('download-link').click();
+    
+        // Trigger the download
+        const link = document.createElement('a');
+        link.href = ' https://drive.google.com/uc?export=download&id=1XI-oQ23FvyYnWF8bZQlQYVRMPyJkGZTV';  //
+        // link.href = ' https://drive.google.com/uc?export=download&id=1XI-oQ23FvyYnWF8bZQlQYVRMPyJkGZTV';  // Path to the APK file in the public folder
+        link.download = 'CCA.apk';
+        document.body.appendChild(link);  // Append link to the DOM
+        link.click();  // Trigger download
+        document.body.removeChild(link);  // Clean up after click
     };
+
+    // const handleDownload = () => {
+    //     alert('Once the download is complete, open the "CCA" app, go to the "Downloads" folder, and tap on the APK file to install the app.');
+
+
+    //     https://drive.google.com/uc?export=download&id=1XI-oQ23FvyYnWF8bZQlQYVRMPyJkGZTV
+
+    // };
 
 
 
@@ -136,15 +152,16 @@ export default function Head() {
                         <button style={buttonStyleD} onClick={handleDownload}>
                             Download Mobile App (APK)
                         </button>
-                        <Link
+                        {/* <Link
                             id="download-link"
-                            to="/CCA.apk"
+                            to="/cca.apk"
                             target="_blank"
                             download
-                            style={{ display: "none" }}
+                            
                         >
                             Download
                         </Link>
+                        <a href="/cca.apk" download>Download APK</a> */}
                     </div>
                 </div>
             </div>
