@@ -24,7 +24,7 @@ export default function Head() {
     
         // Trigger the download
         const link = document.createElement('a');
-        link.href = ' https://drive.google.com/uc?export=download&id=1XI-oQ23FvyYnWF8bZQlQYVRMPyJkGZTV';  //
+        link.href = ' https://drive.google.com/uc?export=download&id=1LR_bJOurYgl6IW7y9QKT5zYB4HYlLEsS';  //
         // link.href = ' https://drive.google.com/uc?export=download&id=1XI-oQ23FvyYnWF8bZQlQYVRMPyJkGZTV';  // Path to the APK file in the public folder
         link.download = 'CCA.apk';
         document.body.appendChild(link);  // Append link to the DOM
