@@ -99,7 +99,7 @@ export default function StripUpgrade() {
                 <Card props={ premium } />
                 <Card props={ gold } />
                 <SpecialCard  props={ special } />
-                //Todo chane app apeacial switch
+             
                 {/* <Card props={ custom } /> */}
             </div>
 
