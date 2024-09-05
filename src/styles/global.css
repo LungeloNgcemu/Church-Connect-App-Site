@@ -1,11 +1,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
-
 body {
-    font-family:  Sansita, sans-serif;
-    background-color: white;
-    /* font-size: 16px; */
-    /* Add other font-related styles as needed */
+    font-family: Sansita, sans-serif !important;
+    background-color: white !important;
+    /* Add other styles as needed */
+}
+
+h1{
+  font-family: Sansita, sans-serif !important;
 }
 
 html {
@@ -104,6 +106,9 @@ html {
 
 
   .overlayContentStyle  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0.33);
      padding: 20px;
      border-radius: 20px;

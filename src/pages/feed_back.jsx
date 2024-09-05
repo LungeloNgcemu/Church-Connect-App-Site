@@ -7,11 +7,13 @@ import pray from '../assets/pray.jpg'
 import { useState } from 'react';
 import supabaseConnnection from '../supabaseDatabase';
 
+import CircularIndeterminate from '../components/progress';
+
 
 
 export default function FeedBack() {
 
-
+    const [isLoading, setIsLoading] = useState(false);
 
     const [FeedBack, setFeedBack] = useState({
         Name: "",
@@ -25,9 +27,11 @@ export default function FeedBack() {
     }
 
     async function onSubmit(e) {
+        setIsLoading(true)
         e.preventDefault();
         console.log(FeedBack);
         await uploadComment()
+        setIsLoading(false)
     }
 
     async function uploadComment() {
@@ -42,6 +46,7 @@ export default function FeedBack() {
                 });
 
             if (error) {
+                setIsLoading(false)
                 console.error(`Error inserting data: ${error.message}`);
             } else {
                 console.log('Comment submitted successfully:', FeedBack);
@@ -52,9 +57,11 @@ export default function FeedBack() {
                     Email: "",
                     Comment: ""
                 });
+                setIsLoading(false)
                 alert("Thank you for your feed back")
             }
         } catch (err) {
+            setIsLoading(false)
             console.error(`Unexpected error: ${err}`);
         }
     }
@@ -65,7 +72,8 @@ export default function FeedBack() {
         // backgroundColor: "red",
         width: "100%",
         height: "100%",
-        marginBottom: "100px"
+        marginBottom: "100px",
+        position: "relative" 
     }
 
     const top = {
@@ -156,6 +164,17 @@ export default function FeedBack() {
 
             <div style={container}>
 
+            <div>
+
+            </div>
+
+            {isLoading ? <div style={{ width: "100%", height: "100%" ,position: "absolute", display: "flex", justifyContent: "center", alignItems: "center" }}>
+
+<div style={{}}>
+    <CircularIndeterminate />
+</div>
+</div> : null}
+
                 <form style={formStyle}
                     onSubmit={onSubmit}
                 >
@@ -202,10 +221,11 @@ export default function FeedBack() {
                     </div>
 
 
-                    <button type='submit' style={button} > submit</button>
+                    <button disabled={isLoading} type='submit' style={button} > submit</button>
                 </form>
 
             </div>
+            
             <Footer />
 
         </div>

@@ -77,11 +77,24 @@ export default function Head() {
 
 
     const buttonStyleL = {
-        margin: "10px",
+        marginTop:"10px",
+        margin: "5px",
 
-        width: "100%", // Make button full width of parent container
+        width: "97%", // Make button full width of parent container
         padding: "10px", // Adjust padding as needed
         backgroundColor: "#6495ED", // Example background color
+        color: "white", // Example text color
+        border: "none", // Remove default border
+        borderRadius: "15px", // Example border radius
+        cursor: "pointer", // Change cursor on hover
+    };
+
+    const buttonStyleD = {
+        margin: "5px",
+
+        width: "97%", // Make button full width of parent container
+        padding: "10px", // Adjust padding as needed
+        backgroundColor: "black", // Example background color
         color: "white", // Example text color
         border: "none", // Remove default border
         borderRadius: "15px", // Example border radius
@@ -99,17 +112,7 @@ export default function Head() {
         borderRadius: "15px", // Example border radius
         cursor: "pointer", // Change cursor on hover
     };
-    const buttonStyleD = {
-        margin: "10px",
-
-        width: "97%", // Make button full width of parent container
-        padding: "10px", // Adjust padding as needed
-        backgroundColor: "black", // Example background color
-        color: "white", // Example text color
-        border: "none", // Remove default border
-        borderRadius: "15px", // Example border radius
-        cursor: "pointer", // Change cursor on hover
-    };
+  
 
     const overlayContentStyle = {
         backgroundColor: "rgba(255, 255, 255, 0.33)",
@@ -143,8 +146,7 @@ export default function Head() {
 
                     <div style={{ display: "flex", flexDirection: "column" }}>
 
-                        <div style={{ display: "flex", justifyContent: "space-between" }}>
-
+                        <div>
                             {/* <button style={buttonStyleR} onClick={() => { handleClick("register") }}>Register Ministry</button> */}
                             <button style={buttonStyleL} onClick={() => { handleClick("login") }} > Login to Update</button>
 
@@ -152,16 +154,7 @@ export default function Head() {
                         <button style={buttonStyleD} onClick={handleDownload}>
                             Download Mobile App (APK)
                         </button>
-                        {/* <Link
-                            id="download-link"
-                            to="/cca.apk"
-                            target="_blank"
-                            download
-                            
-                        >
-                            Download
-                        </Link>
-                        <a href="/cca.apk" download>Download APK</a> */}
+                     
                     </div>
                 </div>
             </div>

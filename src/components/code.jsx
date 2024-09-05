@@ -5,12 +5,13 @@ import "../styles/input.css";
 import { useContext } from 'react';
 import { ConectionContext } from '../connectionContext';
 import AppwriteConnect from '../appwriteDatabase';
+import CircularIndeterminate from './progress';
 
 
 export default function Code() {
 
     let sessionId = ""
-
+    const [isLoading, setIsLoading] = useState(false);
     const appwriteConnection = AppwriteConnect();
     const { userId } = useContext(ConectionContext);
     const navigate = useNavigate();
@@ -45,7 +46,7 @@ export default function Code() {
 
     const login = async (code) => {
 
-
+        setIsLoading(true);
 
         console.log(userId);
 
@@ -67,17 +68,20 @@ export default function Code() {
             sessionId = session.$id
 
             if (session.current === true) {
+                setIsLoading(false);
                 navigate('account');
             } else {
                 if (sessionId !== "") {
+                    setIsLoading(false);
                     navigate('account');
                 } else {
+                    setIsLoading(false);
                     alert("Oops...you enterd a wrong code");
                 }
             }
 
         } catch (error) {
-
+            setIsLoading(false);
             console.log(error)
             alert("Sorry, The code you entered might be Wrong")
         }
@@ -107,7 +111,7 @@ export default function Code() {
         cursor: "pointer", // Change cursor on hover
         boxShadow: "0 1px 8px grey",
         height: "45px"
-        
+
 
     };
 
@@ -118,7 +122,7 @@ export default function Code() {
         borderRadius: "5px",
         border: "1px solid #6495ED",
         boxShadow: "0 1px 8px grey",
-      
+
 
 
 
@@ -128,25 +132,39 @@ export default function Code() {
 
 
     return (
-        <form onSubmit={(e) => { e.preventDefault(); login(otp); }}>
 
-            <div style={{ display: "flex" }}>
+        <div style={{ position: "relative" }}>
+            {isLoading ? <div style={{ width: "100%", position: "absolute", display: "flex", justifyContent: "center", alignItems: "center" }}>
 
-                <OtpInput
-                    value={otp}
-                    onChange={setOncahnge}
-                    numInputs={6}
-                    separator={<span>-</span>}
-                    renderInput={(props) => <input  {...props} />}
-                    inputStyle={digits}
-                    shouldAutoFocus={true}
+                <div style={{}}>
+                    <CircularIndeterminate />
+                </div>
+            </div> : null}
 
-                />
 
-            </div>
-            <br /><br />
-            <button type='submit' style={button} > submit</button>
+            <form onSubmit={(e) => { e.preventDefault(); login(otp); }}>
 
-        </form>
+                <div style={{ display: "flex" }}>
+
+                    <OtpInput
+                        value={otp}
+                        onChange={setOncahnge}
+                        numInputs={6}
+                        separator={<span>-</span>}
+                        renderInput={(props) => <input  {...props} />}
+                        inputStyle={digits}
+                        shouldAutoFocus={true}
+
+                    />
+
+                </div>
+                <br /><br />
+                <button disabled={isLoading} type='submit' style={button} > submit</button>
+
+            </form>
+
+        </div>
+
+
     )
 }

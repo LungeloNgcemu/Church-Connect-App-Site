@@ -53,10 +53,10 @@ export default function AccountTops() {
     };
 
     const churchName = {
-        width: "80%",
+        width: "100%",
         display: "flex",
         justifyContent: "center",
-        paddingRight: "10%",
+       
         fontSize: "1.8rem",
         textShadow: "2px 4px 3px grey",
     }
@@ -84,9 +84,9 @@ export default function AccountTops() {
 
                 <div className="belowNav" style={{ display: "flex", width: "100%" }}>
 
-                    <div style={info}>
+                    {/* <div style={info}>
                         <Avatar />
-                    </div>
+                    </div> */}
 
 
                     <div style={churchName}>

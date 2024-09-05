@@ -10,13 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.0.2",
     "@paypal/react-paypal-js": "^8.5.0",
     "@square/web-sdk": "^2.0.1",
     "@supabase/supabase-js": "^2.44.4",
     "@syncfusion/ej2-react-charts": "^26.1.39",
     "appwrite": "^14.0.1",
+    "bootstrap": "^5.3.3",
     "google-fonts": "^1.0.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.4",
     "react-dom": "^18.2.0",
     "react-otp-input": "^3.1.1",
     "react-phone-number-input": "^3.4.3",

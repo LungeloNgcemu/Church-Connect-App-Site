@@ -4,10 +4,15 @@ import { useNavigate } from "react-router-dom";
 import AppwriteConnect from '../appwriteDatabase';
 import supabaseConnnection from '../supabaseDatabase';
 import { ConectionContext } from '../connectionContext';
+import Loading from './spinner';
+import LoadingSpinner from './spinner';
+import CircularIndeterminate from './progress';
 
 export default function MyForm() {
 
     //Check if the number is in the data base
+
+    const [isLoading, setIsLoading] = useState(false);
 
 
 
@@ -80,9 +85,14 @@ export default function MyForm() {
 
     const handleSubmit = async (event) => {
 
+
+        setIsLoading(true);
+
         event.preventDefault();
 
         console.log(valueNumber);
+
+        setIsLoading(true);
 
         const { data, error } = await supabaseConnnection
             .from('Church')
@@ -91,7 +101,8 @@ export default function MyForm() {
 
         if (error) {
 
-            alert("Yoou have no church registered, please go register.");
+            setIsLoading(false);
+            alert("You have no church registered, please go register.");
 
         } else {
 
@@ -128,12 +139,13 @@ export default function MyForm() {
                 setUserId(token.userId)
 
                 if (token) {
+                    setIsLoading(false);
                     /// send to code
                     navigate('/code');
                 };
 
             } catch (error) {
-
+                setIsLoading(false);
                 console.log(error)
             };
         };
@@ -169,20 +181,35 @@ export default function MyForm() {
 
     return (
 
-        <form onSubmit={handleSubmit}>
+        <div style={{position: "relative"}}>
+            {isLoading ? <div style={{ width: "100%", position: "absolute", display :"flex", justifyContent: "center", alignItems: "center" }}>
 
-
-
-            <div style={{ display: "flex" }}><label style={{ paddingRight: "20px", fontSize: "16px" }}></label>
-
-                <PhoneNumber value={valueNumber} setValue={setValue} />
-
+            <div style={{ }}>
+               <CircularIndeterminate/>    
             </div>
-            <br /><br />
+            </div> : null}
+
+            <form onSubmit={handleSubmit}>
 
 
-            <button type='submit' style={button} > submit</button>
+                <div>
+                    <div style={{ display: "flex" }}><label style={{ paddingRight: "20px", fontSize: "1.5rem" }}></label>
 
-        </form>
+                        <PhoneNumber value={valueNumber} setValue={setValue} />
+
+                    </div>
+                    <br /><br />
+
+
+                    <button disabled={isLoading}   type='submit' style={button} > submit</button>
+
+
+                </div>
+
+
+
+            </form></div>
+
+
     )
 }
