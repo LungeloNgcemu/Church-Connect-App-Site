@@ -15,7 +15,7 @@ export default function Footer() {
         justifyContent: "center",
         alignItems: "center",
         fontSize: "1.5rem",
-        textShadow:" 3px 3px 6px white"
+        textShadow: " 3px 3px 6px white"
     }
 
 
@@ -23,9 +23,9 @@ export default function Footer() {
         <>
             <div id="contact" style={back}  >
                 <p>
-                    &copy; 2024 Church Connect<br></br><br></br>
+                    &copy; 2025 Church Connect App<br></br><br></br>
 
-                  churchconnect@gmail.com
+                    lungelofarm@gmail.com
 
                 </p>
             </div>

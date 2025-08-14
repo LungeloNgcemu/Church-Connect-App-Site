@@ -38,7 +38,7 @@ export default function NavBar(props) {
                     <ul>
                         <li><a href="/" onClick={handleClick("/")}>Home</a></li>
                         <li><a href="/about" onClick={handleClick("/about")}>About</a></li>
-                        <li><a href="/login" onClick={handleClick("/login")}>Login</a></li>
+                        {/* <li><a href="/login" onClick={handleClick("/login")}>Login</a></li> */}
                         {/* <li><a href="/register" onClick={handleClick("/register")}>Register</a></li> */}
                         <li><a href="#contact" >Contact</a></li>
                         <li><a href="/feed" onClick={handleClick("/feed")}>Feed-Back</a></li>

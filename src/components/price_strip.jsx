@@ -19,33 +19,33 @@ export default function Strip() {
     const zero = {
         kind: "Basic",
         price: "Free",
-        benefits: ["10 Users", "Unlimited Chat", "Unlimited Post", "Push Notification"],
+        benefits: ["10 Users", "Unlimited Chat", "Unlimited Post"],
     }
     const one = {
         kind: "Advanced",
-        price: "$25 per month",
-        benefits: ["60 Users", "Unlimited Chat", "Unlimited Post", "Push Notification"],
+        price: "R250 per month",
+        benefits: ["60 Users", "Unlimited Chat", "Unlimited Post"],
     }
     const two = {
         kind: "Premium",
-        price: "$50 per month",
-        benefits: ["200 Users", "Unlimited Chat", "Unlimited Post", "Push Notification"]
+        price: "R500 per month",
+        benefits: ["200 Users", "Unlimited Chat", "Unlimited Post"]
     }
 
     const three = {
         kind: "Gold",
-        price: "$75 per month",
-        benefits: ["500 Users", "Unlimited Chat", "Unlimited Post", "Push Notification"]
+        price: "R750 per month",
+        benefits: ["500 Users", "Unlimited Chat", "Unlimited Post"]
     }
     const four = {
         kind: "Custom",
         price: "Contact us",
-        benefits: ["Custom number of  Users", "Chat", "Unlimited Post", "Push Notification"]
+        benefits: ["Custom number of  Users", "Chat", "Unlimited Post"]
     }
     const special = {
         kind: "Special",
-        price: "$35 per month",
-        benefits: ["150 Users", "Chat", "Unlimited Post", "Push Notification"]
+        price: "R350 per month",
+        benefits: ["150 Users", "Chat", "Unlimited Post"]
     }
  
 

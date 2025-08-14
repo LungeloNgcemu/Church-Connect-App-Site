@@ -21,7 +21,7 @@ export default function Head() {
 
     const handleDownload = () => {
         alert('Once the download is complete, open the "CCA" app, go to the "Downloads" folder, and tap on the APK file to install the app.');
-    
+
         // Trigger the download
         const link = document.createElement('a');
         link.href = ' https://drive.google.com/uc?export=download&id=1llXzBpAAcmLelYgxPYFZP92747x8yHn5';  //
@@ -77,7 +77,7 @@ export default function Head() {
 
 
     const buttonStyleL = {
-        marginTop:"10px",
+        marginTop: "10px",
         margin: "5px",
 
         width: "97%", // Make button full width of parent container
@@ -90,8 +90,8 @@ export default function Head() {
     };
 
     const buttonStyleD = {
-        margin: "5px",
-
+        marginTop: "15px",
+       
         width: "97%", // Make button full width of parent container
         padding: "10px", // Adjust padding as needed
         backgroundColor: "black", // Example background color
@@ -112,7 +112,7 @@ export default function Head() {
         borderRadius: "15px", // Example border radius
         cursor: "pointer", // Change cursor on hover
     };
-  
+
 
     const overlayContentStyle = {
         backgroundColor: "rgba(255, 255, 255, 0.33)",
@@ -148,13 +148,13 @@ export default function Head() {
 
                         <div>
                             {/* <button style={buttonStyleR} onClick={() => { handleClick("register") }}>Register Ministry</button> */}
-                            <button style={buttonStyleL} onClick={() => { handleClick("login") }} > Login to Update</button>
+                            {/* <button style={buttonStyleL} onClick={() => { handleClick("login") }} > Login to Update</button> */}
 
                         </div>
                         <button style={buttonStyleD} onClick={handleDownload}>
-                            Download Mobile App (APK)
+                            Download Mobile App on Play Store
                         </button>
-                     
+
                     </div>
                 </div>
             </div>
