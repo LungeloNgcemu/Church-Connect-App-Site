@@ -20,26 +20,8 @@ export default function Head() {
 
 
     const handleDownload = () => {
-        alert('Once the download is complete, open the "CCA" app, go to the "Downloads" folder, and tap on the APK file to install the app.');
-
-        // Trigger the download
-        const link = document.createElement('a');
-        link.href = ' https://drive.google.com/uc?export=download&id=1llXzBpAAcmLelYgxPYFZP92747x8yHn5';  //
-        // link.href = ' https://drive.google.com/uc?export=download&id=1XI-oQ23FvyYnWF8bZQlQYVRMPyJkGZTV';  // Path to the APK file in the public folder
-        link.download = 'CCA.apk';
-        document.body.appendChild(link);  // Append link to the DOM
-        link.click();  // Trigger download
-        document.body.removeChild(link);  // Clean up after click
+        window.open("https://churchweb.onrender.com", "_self");
     };
-
-    // const handleDownload = () => {
-    //     alert('Once the download is complete, open the "CCA" app, go to the "Downloads" folder, and tap on the APK file to install the app.');
-
-
-    //     https://drive.google.com/uc?export=download&id=1XI-oQ23FvyYnWF8bZQlQYVRMPyJkGZTV
-
-    // };
-
 
 
     const layout = {
@@ -91,7 +73,7 @@ export default function Head() {
 
     const buttonStyleD = {
         marginTop: "15px",
-       
+
         width: "97%", // Make button full width of parent container
         padding: "10px", // Adjust padding as needed
         backgroundColor: "black", // Example background color
@@ -152,7 +134,7 @@ export default function Head() {
 
                         </div>
                         <button style={buttonStyleD} onClick={handleDownload}>
-                            Download Mobile App on Play Store
+                            Launch Church Connect APP
                         </button>
 
                     </div>
