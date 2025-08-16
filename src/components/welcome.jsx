@@ -44,7 +44,7 @@ export default function Welcome() {
                 <h4> Connect your ministry to those that follow you...</h4>
             </div>
             <div style={welcome_message}>
-                <p> Mobile App is currently available as an APK but will soon be available on the Play Store and Apple Store this year</p>
+                <p> Mobile Web App is currently available as an PWA</p>
             </div>
 
         </div>
