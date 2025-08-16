@@ -1,5 +1,7 @@
 import React from "react";
 import image from "../assets/pray.jpg"
+import { FaWhatsapp } from "react-icons/fa";
+
 
 
 export default function Footer() {
@@ -21,14 +23,18 @@ export default function Footer() {
 
     return (
         <>
-            <div id="contact" style={back}  >
+            <div id="contact" style={back}>
                 <p>
-                    &copy; 2025 Church Connect App<br></br><br></br>
-
-                    lungelofarm@gmail.com
-
+                    &copy; 2025 Church Connect App
+                    <br />
+                    <br />
+                    <FaWhatsapp
+                        style={{ color: "green", marginRight: "8px", verticalAlign: "middle" }}
+                    />
+                     +27(0) 67 899 3879
                 </p>
             </div>
         </>
     );
+
 }
