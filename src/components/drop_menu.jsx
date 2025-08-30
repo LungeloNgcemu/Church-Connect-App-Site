@@ -65,8 +65,8 @@ export default function DropMenu() {
                     <div style={drop}>
                         <a style={link} href="/" onClick={handleClick("/")} >Home</a>
                         <a style={link} href="/about" onClick={handleClick("/about")}>About</a>
-                        <a style={link} href="/login" onClick={handleClick("/login")}>Login</a>
-                        <a style={link} href="/register" onClick={handleClick("/register")}>Register</a>
+                        {/* <a style={link} href="/login" onClick={handleClick("/login")}>Login</a>
+                        <a style={link} href="/register" onClick={handleClick("/register")}>Register</a> */}
                         <a style={link} href="#contact">Contact</a>
                         <a style={link} href="/feed" onClick={handleClick("/feed")}>Feed-Back</a>
                     </div>

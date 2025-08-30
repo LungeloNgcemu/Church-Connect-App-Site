@@ -21,11 +21,11 @@ export default function Strip() {
         price: "Free",
         benefits: ["10 Users", "Unlimited Chat", "Unlimited Post"],
     }
-    const one = {
-        kind: "Advanced",
-        price: "R250 per month",
-        benefits: ["60 Users", "Unlimited Chat", "Unlimited Post"],
-    }
+    // const one = {
+    //     kind: "Advanced",
+    //     price: "R250 per month",
+    //     benefits: ["60 Users", "Unlimited Chat", "Unlimited Post"],
+    // }
     const two = {
         kind: "Premium",
         price: "R500 per month",
@@ -44,7 +44,7 @@ export default function Strip() {
     }
     const special = {
         kind: "Special",
-        price: "R350 per month",
+        price: "R350 one month",
         benefits: ["150 Users", "Chat", "Unlimited Post"]
     }
  
@@ -56,7 +56,7 @@ export default function Strip() {
 
             <Card props={zero} />
             <SpecialCard props={special}/>
-            <Card props={one} />
+            {/* <Card props={one} /> */}
             <Card props={two} />
             <Card props={three} />
             <Card props={four} />
